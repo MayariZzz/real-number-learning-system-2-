@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Number & Inequality Learning System - Module 4</title>
+  
+  <!-- Modern Font & KaTeX CSS for LaTeX math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- KaTeX JavaScript -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">Real Number System</div>
+    <nav>
+      <a href="#" class="nav-link">Module 1</a>
+      <a href="#" class="nav-link">Module 2</a>
+      <a href="#" class="nav-link">Module 3</a>
+      <a href="#" class="nav-link active">Module 4: Assessment</a>
+    </nav>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="container">
+    
+    <!-- Control Panel Sidebar -->
+    <aside class="sidebar">
+      <h2>Controls</h2>
+      
+      <div class="control-group">
+        <label for="topic-select">Topic:</label>
+        <select id="topic-select">
+          <option value="all">All Topics (Mixed)</option>
+          <option value="classification">Number Classification</option>
+          <option value="distance">Distance & Number Line</option>
+          <option value="inequality">Inequalities</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="difficulty-select">Difficulty Level:</label>
+        <select id="difficulty-select">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="mode-select">Assessment Mode:</label>
+        <select id="mode-select">
+          <option value="practice">Practice Mode (Instant Feedback)</option>
+          <option value="quiz">Timed Quiz Mode</option>
+        </select>
+      </div>
+
+      <!-- Scoreboard Stats -->
+      <div class="score-card">
+        <h3>Performance</h3>
+        <p>Score: <strong id="score-display">0 / 0</strong></p>
+        <p>Accuracy: <strong id="accuracy-display">0%</strong></p>
+        <p id="timer-container" class="hidden">Time Remaining: <strong id="timer-display">02:00</strong></p>
+      </div>
+
+      <button id="reset-btn" class="btn secondary-btn">Reset Stats</button>
+    </aside>
+
+    <!-- Main Problem View -->
+    <section class="quiz-area">
+      <div class="card">
+        <div class="card-header">
+          <span id="problem-category-badge" class="badge">Inequalities</span>
+          <span id="problem-difficulty-badge" class="badge difficulty-medium">Medium</span>
+        </div>
+
+        <!-- Rendered LaTeX Math Problem -->
+        <div class="problem-display">
+          <p id="problem-prompt">Solve the inequality for \(x\):</p>
+          <div id="math-expression"></div>
+        </div>
+
+        <!-- Dynamic User Input Area -->
+        <div id="input-container" class="input-container">
+          <!-- Populated by JavaScript based on question type -->
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="button-group">
+          <button id="submit-btn" class="btn primary-btn">Submit Answer</button>
+          <button id="next-btn" class="btn secondary-btn hidden">Next Question &rarr;</button>
+        </div>
+
+        <!-- Feedback Result Message -->
+        <div id="feedback-banner" class="feedback-banner hidden"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Load Module 4 JavaScript files -->
+  <script src="js/module4/generator.js"></script>
+  <script src="js/module4/evaluator.js"></script>
+  <script src="js/module4/main.js"></script>
+</body>
+</html>s
